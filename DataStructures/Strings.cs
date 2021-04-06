@@ -80,6 +80,18 @@ namespace DataStructures
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Assume you have a method isSubstring which checks if one word is a substring of
+        //  another.Given two strings, string1 and string2, write code to check if string2 is a rotation of string1 (i.e., “waterbottle” is a rotation of “erbottlewat”).
+        /// </summary>
+        /// <param name="string1"></param>
+        /// <param name="string2"></param>
+        /// <returns></returns>
+        public static bool IsRotatedSubstring(string string1, string string2)
+        {
+            return (string1 + string1).Contains(string2);
+        }
+
 
     }
 }
