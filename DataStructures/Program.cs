@@ -17,12 +17,23 @@ namespace DataStructures
 
             #region Arrays
             int[,] array2Da = new int[4, 2] { { 1, 2 }, { 3, 4 }, { 5, 0 }, { 7, 8 } };
-            Console.WriteLine($"MAtrix Clockwise rotations of { JsonConvert.SerializeObject(array2Da) } is {JsonConvert.SerializeObject(Arrays.RotateMatrixClockwise(array2Da))}");
-            Console.WriteLine($"MAtrix Counter Clockwise rotations of { JsonConvert.SerializeObject(array2Da) } is {JsonConvert.SerializeObject(Arrays.RotateMatrixCounterClockwise(array2Da))}");
+            Console.WriteLine($"Matrix Clockwise rotations of { JsonConvert.SerializeObject(array2Da) } is {JsonConvert.SerializeObject(Arrays.RotateMatrixClockwise(array2Da))}");
+            Console.WriteLine($"Matrix Counter Clockwise rotations of { JsonConvert.SerializeObject(array2Da) } is {JsonConvert.SerializeObject(Arrays.RotateMatrixCounterClockwise(array2Da))}");
             Console.WriteLine($"MakeZero of { JsonConvert.SerializeObject(array2Da) } is {JsonConvert.SerializeObject(Arrays.MakeRowAndColumZero(array2Da))}");
             #endregion
 
+
+            #region Recursion
+            int[] arr = { 2, 3, 4, 10, 40 };
+            int result = Recursion.BinarySearch(arr, 0, arr.Length - 1, 40); //For Binary search the assumption is that input Array is always sorted
+            Console.WriteLine(result != -1 ? "Element found at index " + result : "Element not present");
+            Console.WriteLine($"SimpleFibonacci {Recursion.SimpleFibonacci(6)}");
+            Console.WriteLine($"SimpleFibonacci {Recursion.FibonacciUsingMemoizedRecursion(6)}");
+
+            #endregion
+
             Console.ReadLine();
+
 
         }
     }
