@@ -40,7 +40,34 @@
         }
 
 
+        public static int[,] MakeRowAndColumZero(int[,] matrix)
+        {
+            int[,] MakeZero(int[,] matrix, int rowNumber, int columnNumber)
+            {
+                for (int i = 0; i < matrix.GetLength(1); i++)
+                {
+                    matrix[rowNumber, i] = 0;
+                }
+                for (int j = 0; j < matrix.GetLength(0); j++)
+                {
+                    matrix[j, columnNumber] = 0;
+                }
+                return matrix;
+            }
 
-
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    if (matrix[i, j] == 0)
+                    {
+                        MakeZero(matrix, i, j);
+                        i++;
+                        break;
+                    }
+                }
+            }
+            return matrix;
+        }
     }
 }

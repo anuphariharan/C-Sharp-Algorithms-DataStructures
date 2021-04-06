@@ -17,11 +17,12 @@ namespace DataStructures
             #endregion
 
             #region Arrays
-            int[,] array2Da = new int[4, 2] { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } };
+            int[,] array2Da = new int[4, 2] { { 1, 2 }, { 3, 4 }, { 5, 0 }, { 7, 8 } };
 
-            Console.WriteLine($"MAtrix rotations of { JsonConvert.SerializeObject(array2Da) } is {JsonConvert.SerializeObject(Arrays.RotateMatrixClockwise(array2Da))}");
-            Console.WriteLine($"MAtrix rotations of { JsonConvert.SerializeObject(array2Da) } is {JsonConvert.SerializeObject(Arrays.RotateMatrixCounterClockwise(array2Da))}");
-            
+            Console.WriteLine($"MAtrix Clockwise rotations of { JsonConvert.SerializeObject(array2Da) } is {JsonConvert.SerializeObject(Arrays.RotateMatrixClockwise(array2Da))}");
+            Console.WriteLine($"MAtrix Counter Clockwise rotations of { JsonConvert.SerializeObject(array2Da) } is {JsonConvert.SerializeObject(Arrays.RotateMatrixCounterClockwise(array2Da))}");
+            Console.WriteLine($"MakeZero of { JsonConvert.SerializeObject(array2Da) } is {JsonConvert.SerializeObject(Arrays.MakeRowAndColumZero(array2Da))}");
+
             #endregion
 
             Console.ReadLine();
