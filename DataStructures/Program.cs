@@ -1,4 +1,5 @@
 ﻿using System;
+using DataStructures.BinaryTree;
 using Newtonsoft.Json;
 
 namespace DataStructures
@@ -29,7 +30,13 @@ namespace DataStructures
             Console.WriteLine(result != -1 ? "Element found at index " + result : "Element not present");
             Console.WriteLine($"SimpleFibonacci {Recursion.SimpleFibonacci(6)}");
             Console.WriteLine($"SimpleFibonacci {Recursion.FibonacciUsingMemoizedRecursion(6)}");
+            #endregion
 
+            #region BinaryTrees
+            Node root = null;
+            for (int i = 0; i < arr.Length; i++)
+                root = Node.Insert(root, arr[i]);
+            Node.InOrder(root);
             #endregion
 
             Console.ReadLine();

@@ -28,10 +28,9 @@ namespace DataStructures
 
         public static int SimpleFibonacci(int number)
         {
-            Console.WriteLine(number);
+            
             // Base case. Break recursion
             if (number <= 1) return number;
-
             // recursive calls
             return SimpleFibonacci(number - 1) + SimpleFibonacci(number - 2);
         }
@@ -39,14 +38,14 @@ namespace DataStructures
         static List<int> FibonacciMemoizedList = new List<int>() { 0,1 } ;
         public static int FibonacciUsingMemoizedRecursion(int number)
         {
-            
+            Console.WriteLine(number);
             if (FibonacciMemoizedList.Contains(number))
-                return FibonacciMemoizedList[number];
+                return number;
 
             var value = FibonacciUsingMemoizedRecursion(number - 1) + FibonacciUsingMemoizedRecursion(number - 2);
 
             FibonacciMemoizedList.Add(value);
-            Console.WriteLine(value);
+            //Console.WriteLine(value);
             return value;
         }
 
