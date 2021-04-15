@@ -24,6 +24,24 @@ namespace DataStructures.BinaryTree
                 InOrder(root.rightNode);
             }
         }
+        public static void PreOrder(Node root)
+        {
+            if (root != null)
+            {
+                Console.Write(root.data + " ");
+                PreOrder(root.leftNode);
+                PreOrder(root.rightNode);
+            }
+        }
+        public static void PostOrder(Node root)
+        {
+            if (root != null)
+            {
+                PostOrder(root.leftNode);
+                PostOrder(root.rightNode);
+                Console.Write(root.data + " ");
+            }
+        }
         public static bool IsPerfectBinaryTree(int count)
         {
             count = count + 1;
