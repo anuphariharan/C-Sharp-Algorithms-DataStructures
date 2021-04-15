@@ -36,6 +36,7 @@ namespace DataStructures
             BinaryTree.Node root = null;
             for (int i = 0; i < treeData.Length; i++)
                 root = BinaryTree.Node.Insert(root, treeData[i]);
+            Console.WriteLine($"InOrder Traversal of Binary Tree is : ");
             BinaryTree.Node.InOrder(root);
             #endregion
 
