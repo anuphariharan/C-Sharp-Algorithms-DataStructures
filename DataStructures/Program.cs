@@ -33,9 +33,10 @@ namespace DataStructures
             #endregion
 
             #region BinaryTrees
+            int[] treeData = { 8, 6, 7, 12, 5, 1, 9 };
             Node root = null;
-            for (int i = 0; i < arr.Length; i++)
-                root = Node.Insert(root, arr[i]);
+            for (int i = 0; i < treeData.Length; i++)
+                root = Node.Insert(root, treeData[i]);
             Node.InOrder(root);
             #endregion
 
