@@ -1,5 +1,4 @@
 ﻿using System;
-using DataStructures.BinaryTree;
 using Newtonsoft.Json;
 
 namespace DataStructures
@@ -34,10 +33,10 @@ namespace DataStructures
 
             #region BinaryTrees
             int[] treeData = { 8, 6, 7, 12, 5, 1, 9 };
-            Node root = null;
+            BinaryTree.Node root = null;
             for (int i = 0; i < treeData.Length; i++)
-                root = Node.Insert(root, treeData[i]);
-            Node.InOrder(root);
+                root = BinaryTree.Node.Insert(root, treeData[i]);
+            BinaryTree.Node.InOrder(root);
             #endregion
 
             Console.ReadLine();
