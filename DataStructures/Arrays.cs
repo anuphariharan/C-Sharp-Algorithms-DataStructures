@@ -4,16 +4,23 @@
     {
         public static int[,] RotateMatrixClockwise(int[,] oldMatrix)
         {
-            int[,] newMatrix = new int[oldMatrix.GetLength(1), oldMatrix.GetLength(0)]; //Set new dimension
+            //Solution : Assign and get oldRowIndex, oldColumnIndex and then assign it to the new Matrix newRowIndex, newColumnIndex.
+            #region OldMatrixDimension Length
+            int oldMatrixRowLength = oldMatrix.GetLength(0);
+            int oldMatrixColumnLength = oldMatrix.GetLength(1);
+            #endregion
+
+            int[,] newMatrix = new int[oldMatrixColumnLength, oldMatrixRowLength]; //Set new dimension
 
             for (int oldColumnIndex = 0, newRowIndex = 0;
-                oldColumnIndex < oldMatrix.GetLength(1) && newRowIndex < oldMatrix.GetLength(1);
+                oldColumnIndex < oldMatrixColumnLength && newRowIndex < oldMatrixColumnLength;
                 oldColumnIndex++, newRowIndex++)
             {
-                for (int oldRowIndex = oldMatrix.GetLength(0) - 1, newColumnIndex = 0;
-                    oldRowIndex >= 0 && newColumnIndex < oldMatrix.GetLength(0);
+                for (int oldRowIndex = oldMatrixRowLength - 1, newColumnIndex = 0;
+                    oldRowIndex >= 0 && newColumnIndex < oldMatrixRowLength;
                     oldRowIndex--, newColumnIndex++)
                 {
+                    
                     newMatrix[newRowIndex, newColumnIndex] = oldMatrix[oldRowIndex, oldColumnIndex];
                 }
             }
@@ -22,14 +29,20 @@
 
         public static int[,] RotateMatrixCounterClockwise(int[,] oldMatrix)
         {
-            int[,] newMatrix = new int[oldMatrix.GetLength(1), oldMatrix.GetLength(0)];//Set new dimension
+            //Solution : Assign and get oldRowIndex, oldColumnIndex and then assign it to the new Matrix newRowIndex, newColumnIndex.
+            #region OldMatrixDimension Length
+            int oldMatrixRowLength = oldMatrix.GetLength(0);
+            int oldMatrixColumnLength = oldMatrix.GetLength(1);
+            #endregion
 
-            for (int oldColumnIndex = oldMatrix.GetLength(1) - 1, newRowIndex = 0;
+            int[,] newMatrix = new int[oldMatrixColumnLength, oldMatrixRowLength];//Set new dimension
+
+            for (int oldColumnIndex = oldMatrixColumnLength - 1, newRowIndex = 0;
                 oldColumnIndex >= 0;
                 oldColumnIndex--, newRowIndex++)
             {
                 for (int oldRowIndex = 0, newColumnIndex = 0;
-                    oldRowIndex < oldMatrix.GetLength(0);
+                    oldRowIndex < oldMatrixRowLength;
                     oldRowIndex++, newColumnIndex++) //Zero to last
                 {
                     newMatrix[newRowIndex, newColumnIndex] = oldMatrix[oldRowIndex, oldColumnIndex];
@@ -63,7 +76,6 @@
                     {
                         MakeZero(matrix, i, j);
                         i++;
-                        break;
                     }
                 }
             }
