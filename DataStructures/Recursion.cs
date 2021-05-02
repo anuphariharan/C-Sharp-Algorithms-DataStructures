@@ -8,7 +8,7 @@ namespace DataStructures
     {
         public static int BinarySearch(int[] arr, int left, int right, int searchNumber)
         {
-            if (right >= left)
+            if (right >= left) //continue to search number
             {
                 int mid = left + (right - left) / 2;
 
