@@ -7,7 +7,7 @@
             int[,] newMatrix = new int[oldMatrix.GetLength(1), oldMatrix.GetLength(0)]; //Set new dimension
 
             for (int oldColumnIndex = 0, newRowIndex = 0;
-                oldColumnIndex >= 0 && newRowIndex < oldMatrix.GetLength(1);
+                oldColumnIndex < oldMatrix.GetLength(1) && newRowIndex < oldMatrix.GetLength(1);
                 oldColumnIndex++, newRowIndex++)
             {
                 for (int oldRowIndex = oldMatrix.GetLength(0) - 1, newColumnIndex = 0;

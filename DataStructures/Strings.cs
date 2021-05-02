@@ -21,7 +21,7 @@ namespace DataStructures
 
         public static string RemoveDuplicateCharacters(string str)
         {
-
+            
             bool[] char_set = new bool[256];
             var sb = new StringBuilder();
             for (int i = 0; i < str.Length; i++)
@@ -30,10 +30,6 @@ namespace DataStructures
                 if (!char_set[val])
                 {
                     sb.Append(str[i]);
-                }
-                else
-                {
-                    ;
                 }
             }
             return sb.ToString();
