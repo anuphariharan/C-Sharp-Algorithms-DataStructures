@@ -52,6 +52,7 @@ namespace DataStructures
                 if (!char_set[val])
                 {
                     areAnagrams = false;
+                    break;
                 }
             }
             return areAnagrams;
